@@ -3,13 +3,7 @@
 body{
     margin: 0;
     padding: 0;
-
     font-family: Ubuntu, sans-serif;
-}
-
-.bot{
-    padding: 3%;
-    width: 20%;
 }
 
 .chat{
@@ -22,8 +16,8 @@ body{
     border-top-right-radius: 4px;
 }
 
-.bot input{
-    width: 104%;
+#bot input{
+    width: 100%;
     border: none;
     padding: 4% 5%;
     color: white;

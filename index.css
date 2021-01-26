@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    padding: 0;
+    background:dimgray;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.grafic{
+    top:50%;
+    left:0;
+    position:absolute;
+    width:50%;
+    height:50%;
+}
+#map{
+    left:0;
+    top:0;
+    position:absolute;
+    width:50%;
+    height:50%;
+}
+#calendar{
+    z-index:0;
+    position: relative; /*NU STIU DE CE MERGE, LASA-L ASA*/
+    width:50%;
+    height:50%; 
+}
+.fc{
+    z-index:0;
+    left:50%;
+    top:0;
+    position:absolute;
+    width:200px;
+    height:200px;
+}
+#bot{
+    z-index:1;
+    position:absolute;
+    float:right;
+    bottom:0;
+    right:0;
+    width:350px;
+    height:500px;
+}
+.chat{
+    cursor: move;
+}

@@ -46,7 +46,7 @@
         </script>
     </head>
     <body onload="initMap();">
-        <div id="map" style="width: 300px; height:300px;">
+        <div id="map">
 
         </div>
     </body>

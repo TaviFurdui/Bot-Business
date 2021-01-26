@@ -27,7 +27,7 @@
     ?>
 </head>
 <body>
-    <div class="container">
+    <div class="grafic">
         <canvas id="myChart" style="background:#222; font-color:white;"></canvas>
     </div>
     <script>
