@@ -128,6 +128,12 @@
 
     <body onload="initMap();">
 
+        <div class="bara-sus">
+            <div class="add-buton">
+            <a href="form.php">+</a>
+            </div>
+        </div>
+
         <div class="grafic">
             <canvas id="myChart" style="background:#222; font-color:white;"></canvas>
         </div>
@@ -136,11 +142,11 @@
 
         </div>
 
-            <div id="calendar">
+        <div id="calendar">
 
-            </div>
+        </div>
 
-        <div id="bot">   <!-------------ORICE DIV CARE APARTINE CHATULUI CU BOTUL AR FI BINE SA FIE INAUNTRUL DIVULUI "BOT" PENTRU CA ALTFEL NU MAI E DRAGGABLE--------------->
+        <div id="bot">   <!---ORICE DIV CARE APARTINE CHATULUI CU BOTUL AR FI BINE SA FIE INAUNTRUL DIV-ULUI "BOT" PENTRU CA ALTFEL NU MAI E DRAGGABLE--------------->
             <div class="chat">
                 <span class="response">Hi there! I'm here to help you! Type help to see what can I do for you</span>
             </div>
