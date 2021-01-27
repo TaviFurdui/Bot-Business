@@ -70,7 +70,7 @@
                         <input class="input" type="text" required></input><br>
                         <label>Type a medium salary per employee</label><br>
                         <input class="input" type="text" required></input><br>
-                        <label>A .xlsx/.csv file with yout monthly costs/earnings</label><br>
+                        <label>A .xlsx/.csv file with your monthly costs/earnings</label><br>
                         <input class="input" type="file" name="import_excel" value="Choose file" required></input><br>
                     </div>
                     <div class="right-form">
