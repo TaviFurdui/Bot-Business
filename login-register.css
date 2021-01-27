@@ -9,11 +9,122 @@ body{
     background: rgb(95,88,209);
     background: linear-gradient(61deg, rgba(95,88,209,1) 0%, rgba(63,9,121,1) 50%, rgba(170,0,255,1) 100%);
 }
+.welcome{
+    width:100%;
+    height:100%;
+    text-align:center;
+    color:white;
+    background:black;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+.text{
+    position: relative;
+    top:20%;
+    -webkit-animation: fadein 2s; 
+    animation: fadein 2s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.welcome h1{
+    font-weight:bolder;
+    font-size:3em;
+    
+}
+.welcome h2{
+    font-weight:bolder;
+    font-size:2em;
 
+}
+.welcome a{
+    scroll-behavior: smooth;
+    text-decoration:none;
+    color:white;
+}
+.charts{
+    top:100%;
+    width:100%;
+    height:100%;
+    text-align:center;
+    color:white;
+    background: rgb(95,88,209);
+    background: linear-gradient(61deg, rgba(95,88,209,1) 0%, rgba(63,9,121,1) 50%, rgba(170,0,255,1) 100%);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+.chart-text{
+    top:40%;
+    width:50%;
+    height:100%;
+    text-align: center;
+    color:white;
+    position:relative;
+    float:left;
+}
+.chart-image{
+    
+    top:25%;
+    width:50%;
+    height:100%;
+    float:right;
+    position:relative;
+}
+.chart-image img{
+    width:80%;
+    height:50%;
+    position:relative;
+    image-rendering: pixelated;
+}
+.events{
+    top:200%;
+    width:100%;
+    height:100%;
+    text-align:center;
+    color:white;
+    background: black;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+.event-text{
+    top:40%;
+    width:50%;
+    height:100%;
+    text-align: center;
+    color:white;
+    position:relative;
+    float:right;
+}
+.event-image{
+    
+    top:25%;
+    width:50%;
+    height:100%;
+    float:left;
+    position:relative;
+}
+.event-image img{
+    width:80%;
+    height:50%;
+    position:relative;
+   
+    border-radius:20px;
+}
 .container{
+    top:300%;
     width: 100%;
     height: 100%;
-
+    position:absolute;
     display: flex;
     justify-content: center;
     align-items: center;
