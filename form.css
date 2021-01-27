@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
 body{
     margin: 0;
     padding: 0;
     background:#622afd;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    font-family: 'Ubuntu', sans-serif;
 }
 .container{
     background:white;
@@ -11,6 +15,11 @@ body{
     top:10%;
     left:15%;
     position: absolute;
+    border-radius: 4px;
+
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
 }
 h2{
     position: relative;
@@ -27,14 +36,24 @@ form{
     width: 80%;
     font-size: 1em;
     color: #636363;
+    margin-top: 6%;
 }
 input[type="text"]{
-    color:#37d3db;
-    border-bottom:2px solid #622afd;
+    color:black;
+    border-bottom: 1px solid #622afd;
     border-top: none;
     border-left: none;
     border-right: none;
+    padding-bottom: 8px;
+    outline: none;
+
+    transition: 0.2s ease-in-out;
 }
+
+input[type="text"]:focus{
+    border-bottom: 2px solid #32b8b8;
+}
+
 ::placeholder{
     color: #622afd;
     opacity: 0.5;
@@ -60,13 +79,24 @@ input[type="text"]{
     border:2px solid #622afd;
 }
 input[type="submit"]{
-    height:50px;
+    padding: 1vh;
     width:cover;
-    color:#636363;
+    color: #424242;
     border:2px solid #622afd;
     cursor:pointer;
     text-align: center;
     position: relative;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    border-radius: 4px;
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+input[type="submit"]:hover{
+    background-color: #622afd;
+    color: white;
+    transform: scaleX(1.05);
 }
