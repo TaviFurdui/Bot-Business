@@ -1,5 +1,28 @@
 <?php
+    session_start();
+
     require_once('connect.php');
+
+    if(isset($_SESSION['email']) && isset($_SESSION['password']))
+    {
+        $email = $_SESSION['email'] ;
+        $password = $_SESSION['password'];
+
+        $stmt = $conexiune->prepare("SELECT * FROM users WHERE email=? AND password=?");
+        $stmt->bind_param('ss', $email, $password);
+
+        $stmt->execute();
+
+        $stmt -> store_result();
+        $no = $stmt->num_rows;
+
+        if($no > 0){
+            header("Location: index.php");
+        }
+        else{}
+
+        $stmt->close();
+    }
 
     if(isset($_POST['login']))
     {

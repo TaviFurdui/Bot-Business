@@ -6,6 +6,33 @@
 <!--------- Jos de tot in pagina sunt doar js-urile de la GRAFIC, BOT (CURRENCY SI DRAGGABLE) si CALENDAR ----------------------->
 <!--------- Orice cod de PHP se afla in HEAD ----------------------->
 <!--------- BODY-UL INCEPE LA LINIA 128 !!!!!!! ----------------------->
+<?php
+    session_start();
+
+    require_once("connect.php");
+
+    if(isset($_SESSION['email']) && isset($_SESSION['password']))
+    {
+        $email = $_SESSION['email'] ;
+        $password = $_SESSION['password'];
+
+        $stmt = $conexiune->prepare("SELECT * FROM users WHERE email=? AND password=?");
+        $stmt->bind_param('ss', $email, $password);
+
+        $stmt->execute();
+
+        $stmt -> store_result();
+        $no = $stmt->num_rows;
+
+        if($no > 0){}
+        else{
+            header("Location: login-register.php");
+        }
+
+        $stmt->close();
+    }
+    
+?>
 
 <html>
     <head>
