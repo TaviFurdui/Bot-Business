@@ -190,9 +190,6 @@
         </div>
 
         <div id="bot">  <!---ORICE DIV CARE APARTINE CHATULUI CU BOTUL AR FI BINE SA FIE INAUNTRUL DIV-ULUI "BOT" PENTRU CA ALTFEL NU MAI E DRAGGABLE--------------->
-            <div class="bot-face">
-                <img src="bot-stock.jpg">
-            </div>   
             <div class="chat">
                 <span class="response">Hi there! I'm here to help you! Type help to see what can I do for you</span>
             </div>
