@@ -1,5 +1,5 @@
 <?php
-    $connect = new PDO('mysql:host=localhost;dbname=events', 'root', '');
+    $connect = new PDO('mysql:host=localhost;dbname=events', 'root', 'root');
 
     if(isset($_POST["id"]))
     {
