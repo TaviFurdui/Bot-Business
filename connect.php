@@ -1,6 +1,8 @@
 <?php
+    session_start();
+
     $nume="root";
-    $parola="";
+    $parola="root";
     $host="localhost";
     $database="tech";
 
