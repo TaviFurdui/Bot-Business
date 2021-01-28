@@ -1,5 +1,5 @@
 <?php
-    $connect = new PDO('mysql:host=localhost;dbname=events', 'root', 'root');
+    $connect = new PDO('mysql:host=localhost;dbname=tech', 'root', 'root');
 
     $data = array();
 
