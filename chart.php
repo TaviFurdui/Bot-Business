@@ -41,7 +41,7 @@
                     data:[<?php echo $costs; ?>],
                     fontColor:'white',
                     backgroundColor:'transparent',
-                    borderColor:'#03dbfc',
+                    borderColor:'white',
                     borderWidth:5
                 },
 
@@ -50,7 +50,7 @@
                     data:[<?php echo $profit; ?>],
                     fontColor:'white',
                     backgroundColor:'transparent',
-                    borderColor:'purple',
+                    borderColor:'gold',
                     borderWidth:5
                 },
 
@@ -59,7 +59,7 @@
                     data:[<?php echo $earnings; ?>],
                     fontColor:'white',
                     backgroundColor:'transparent',
-                    borderColor:'#04cf69',
+                    borderColor:'blue',
                     borderWidth:5
                 }]
             },

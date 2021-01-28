@@ -12,8 +12,6 @@ body{
     overflow-y: scroll;
     background-color: #242526;
     padding: 2%;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
 }
 
 #bot input{

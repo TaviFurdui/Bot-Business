@@ -129,24 +129,43 @@
     <body onload="initMap();">
 
         <div class="bara-sus">
+            <div class="add-business">
+                Add new business
+            </div>
             <div class="add-buton">
-            <a href="form.php">+</a>
+                <a href="form.php">+</a>
             </div>
         </div>
 
-        <div class="grafic">
-            <canvas id="myChart" style="background:#222; font-color:white;"></canvas>
+        <div class="fundal">
+            
+        </div>
+        
+        <div class="about-chart">
+            <h2>Here you can see the profit of your business! Be sure to upload the costs and earnings of the business regularly.</h2>
+            <div class="grafic">
+                <canvas id="myChart" style="background:#222; font-color:white;"></canvas>
+            </div>
         </div>
 
-        <div id="map">
+        <div class="about-map">
+            <h2>This are your business locations. In the future, we want to recommend you new places to open your type of business.</h2>
+            <div id="map">
 
+            </div>
         </div>
 
-        <div id="calendar">
+        <div class="about-calendar">
+            <h2>Here you can set up meetings or reminders on the calendar.</h2>
+            <div id="calendar">
 
+            </div>
         </div>
 
-        <div id="bot">   <!---ORICE DIV CARE APARTINE CHATULUI CU BOTUL AR FI BINE SA FIE INAUNTRUL DIV-ULUI "BOT" PENTRU CA ALTFEL NU MAI E DRAGGABLE--------------->
+        <div id="bot">  <!---ORICE DIV CARE APARTINE CHATULUI CU BOTUL AR FI BINE SA FIE INAUNTRUL DIV-ULUI "BOT" PENTRU CA ALTFEL NU MAI E DRAGGABLE--------------->
+            <div class="bot-face">
+                <img src="bot-stock.jpg">
+            </div>   
             <div class="chat">
                 <span class="response">Hi there! I'm here to help you! Type help to see what can I do for you</span>
             </div>
@@ -174,7 +193,7 @@
                             data:[<?php echo $costs; ?>],
                             fontColor:'white',
                             backgroundColor:'transparent',
-                            borderColor:'#03dbfc',
+                            borderColor:'white',
                             borderWidth:5
                         },
 
@@ -183,7 +202,7 @@
                             data:[<?php echo $profit; ?>],
                             fontColor:'white',
                             backgroundColor:'transparent',
-                            borderColor:'purple',
+                            borderColor:'gold',
                             borderWidth:5
                         },
 
@@ -192,7 +211,7 @@
                             data:[<?php echo $earnings; ?>],
                             fontColor:'white',
                             backgroundColor:'transparent',
-                            borderColor:'#04cf69',
+                            borderColor:'blue',
                             borderWidth:5
                         }]
                     },
