@@ -63,13 +63,13 @@
             <span id="message"></span>
                     <div class="left-form">
                         <label>Business Type</label><br>
-                        <input class="input" type="text" placeholder="Restaurant, Shop..." required></input><br>
+                        <input class="input" name='type' type="text" placeholder="Restaurant, Shop..." required></input><br>
                         <label>Business Name</label><br>
-                        <input class="input" type="text" required></input><br>
+                        <input class="input" name='name' type="text" required></input><br>
                         <label>Type the number of employees</label><br>
-                        <input class="input" type="text" required></input><br>
+                        <input class="input" name='number_empl' type="text" required></input><br>
                         <label>Type a medium salary per employee</label><br>
-                        <input class="input" type="text" required></input><br>
+                        <input class="input" name='salary' type="text" required></input><br>
                         <label>A .xlsx/.csv file with your monthly costs/earnings</label><br>
                         <input class="input" type="file" name="import_excel" value="Choose file" required></input><br>
                     </div>
