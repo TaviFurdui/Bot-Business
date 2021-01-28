@@ -176,14 +176,14 @@
         </div>
 
         <div class="about-map">
-            <h2>This are your business locations. In the future, we want to recommend you new places to open your type of business.</h2>
+            <h2>These are your business locations. In the future, we want to recommend you new places to open your type of business.</h2>
             <div id="map">
 
             </div>
         </div>
 
         <div class="about-calendar">
-            <h2>Here you can set up meetings or reminders on the calendar.</h2>
+            <h2 class="h2">Here you can set up meetings or reminders on the calendar.</h2>
             <div id="calendar">
 
             </div>
