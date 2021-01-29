@@ -410,6 +410,24 @@
                         }, 1000);
                     }
 
+                    function Schedule(name, day, month, year, first_hour, last_hour)
+                    {
+                        $.ajax({
+                            type: 'POST',
+                            url: 'schedule.php',
+                            data: {
+                                name: name,
+                                day: day,
+                                month: month,
+                                year: year, 
+                                first_hour: first_hour,
+                                last_hour: last_hour
+                            },
+                            success: function(response){
+                            }
+                        });
+                    }
+
                     var data = "";
                     if(e.which == 13) {
                         if($("#input-message").val().length > 0)
@@ -432,6 +450,13 @@
                                 {
                                     // convert 10 USD to RON
                                     convertExchange(inputArray[1], inputArray[2], inputArray[4]);
+                                    break;
+                                }
+
+                                if(inputArray[0] == "schedule")
+                                {
+                                    // schedule eveniment 21 01 2021 16:00 18:00
+                                    Schedule(inputArray[1], inputArray[2], inputArray[3], inputArray[4], inputArray[5], inputArray[6]);
                                     break;
                                 }
                             }
