@@ -55,7 +55,7 @@
             $date = '';
             $profit = '';
 
-            $sql = "SELECT * FROM profit ORDER BY date";
+            $sql = "SELECT * FROM profit WHERE user LIKE '".$_SESSION['username']."'";
             $result = mysqli_query($conexiune, $sql);
             while($row = mysqli_fetch_array($result)) 
             {
@@ -72,7 +72,7 @@
         <!------------------------ CSS, JS SI PHP PENTRU HARTA ------------------>
 
         <?php
-            $sql = "SELECT * FROM location";
+            $sql = "SELECT * FROM location WHERE user LIKE '".$_SESSION['username']."'";
             $result = mysqli_query($conexiune, $sql);
             $locations = array();
             $counter = 0;
@@ -428,6 +428,20 @@
                         });
                     }
 
+                    function Add_profit(costs, earnings, date){
+                        $.ajax({
+                            type: 'POST',
+                            url: 'add-profit.php',
+                            data: {
+                                costs: costs,
+                                earnings: earnings,
+                                date: date
+                            },
+                            success: function(response){
+                            }
+                        });
+                    }
+
                     var data = "";
                     if(e.which == 13) {
                         if($("#input-message").val().length > 0)
@@ -457,6 +471,13 @@
                                 {
                                     // schedule eveniment 21 01 2021 16:00 18:00
                                     Schedule(inputArray[1], inputArray[2], inputArray[3], inputArray[4], inputArray[5], inputArray[6]);
+                                    break;
+                                }
+
+                                if(inputArray[0] == "add")
+                                {
+                                    // add 400 500 february 2021
+                                    Add_profit(inputArray[1], inputArray[2], inputArray[3]);
                                     break;
                                 }
                             }

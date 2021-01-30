@@ -1,9 +1,9 @@
 <?php
-
+session_start();
 //import.php
 
 include 'vendor/autoload.php';
-require 'connect.php';
+require_once  'connect.php';
 
 if($_FILES["import_excel"]["name"] != '')
 {
@@ -25,13 +25,13 @@ if($_FILES["import_excel"]["name"] != '')
             $costs = $row[0];
             $earnings = $row[1];
             $date = $row[2];
-
-            $query = "INSERT INTO profit (costs, earnings, date) VALUES (?,?,?)";
+            $query = "INSERT INTO profit (costs, earnings, date, user) VALUES (?,?,?,?)";
 
             $statement = $conexiune->prepare($query);
-            $statement->bind_param("dds",$costs,$earnings,$date);//Bind_param pentru ca data sa fie uploadata bine
+            $statement->bind_param("ddss",$costs,$earnings,$date,$_SESSION['username']);//Bind_param pentru ca data sa fie uploadata bine
             $statement->execute();
             $statement->close();
+
         }
         $message = '<div class="alert alert-success">Data Imported Successfully</div>';
     }
