@@ -1,12 +1,12 @@
 <?php
-    session_start();
 
     require_once('connect.php');
 
-    if(isset($_SESSION['email']) && isset($_SESSION['password']))
+    if(isset($_SESSION['email']) && isset($_SESSION['password']) && isset($_SESSION['username']))
     {
         $email = $_SESSION['email'] ;
         $password = $_SESSION['password'];
+        $username = $_SESSION['username'];
 
         $stmt = $conexiune->prepare("SELECT * FROM users WHERE email=? AND password=?");
         $stmt->bind_param('ss', $email, $password);
@@ -45,6 +45,7 @@
         }
 
         $stmt->close();
+        header("Location: index.php");
     }
 
     if(isset($_POST['sign-up']))

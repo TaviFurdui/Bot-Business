@@ -12,12 +12,12 @@
         $sql = "INSERT INTO form (name, type, number_empl, salary,user) VALUES ('$name','$type','$number_empl','$salary','".$_SESSION['username']."')";
         $result = mysqli_query($conexiune,$sql);
 
-        header ("Location: form.php?info=ok");
+        header ("Location: form.html?info=ok");
         require 'import-excel.php';
         require 'location.php';
     }
     else 
     {
-        header ("Location: form.php?info=eroare");
+        header ("Location: form.html?info=eroare");
     }
 ?>

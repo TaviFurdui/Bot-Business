@@ -6,7 +6,7 @@
     $query = "
     UPDATE events 
     SET title=:title, start_event=:start_event, end_event=:end_event 
-    WHERE id=:id
+    WHERE id=:id AND user LIKE '".$_SESSION['username']."'
     ";
     $statement = $connect->prepare($query);
     $statement->execute(

@@ -1,8 +1,8 @@
 <?php
-
+session_start();
 require 'connect.php';
 
-$sql = "SELECT * FROM location";
+$sql = "SELECT * FROM location WHERE user LIKE '".$_SESSION['username']."'";
 $result = mysqli_query($conexiune, $sql);
 $locations = array();
 $counter = 0;

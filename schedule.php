@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once("connect.php");
 
     $name = isset($_POST['name']) ? $_POST['name'] : '';
@@ -14,7 +15,7 @@
     $start_date = $year . '-' . $month . '-' . $day . ' ' . $first_hour;
     $end_date = $year . '-' . $month . '-' . $day . ' ' . $last_hour;
 
-    $stmt = $conexiune -> prepare("INSERT INTO events (title, start_event, end_event) VALUES(?, ?, ?)");
-    $stmt->bind_param('sss', $name, $start_date, $end_date);
+    $stmt = $conexiune -> prepare("INSERT INTO events (title, start_event, end_event, user) VALUES(?, ?, ?, ?)");
+    $stmt->bind_param('ssss', $name, $start_date, $end_date, $_SESSION['username']);
     $stmt->execute();
 ?>

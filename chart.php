@@ -11,13 +11,13 @@
         $date = '';
         $profit = '';
 
-        $sql = "SELECT * FROM profit ORDER BY date";
+        $sql = "SELECT * FROM profit WHERE user LIKE '".$_SESSION['username']."' ";
         $result = mysqli_query($conexiune, $sql);
         while($row = mysqli_fetch_array($result)) 
         {
             $costs = $costs . '"'. $row['costs'] .'",';
             $earnings = $earnings . '"'. $row['earnings'] .'",';
-            $date = $date . '"'. $row['date'] .'",';    
+            $date = $date . '"'. ucfirst($row['date']) .'",';    
             $profit = $profit . '"'. $row['earnings']-$row['costs'] .'",'; 
         }
         $costs = trim($costs,",");

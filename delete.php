@@ -1,4 +1,5 @@
 <?php
+    session_start();
     if(isset($_POST["id"]))
     {
         $connect = new PDO('mysql:host=localhost;dbname=tech', 'root', 'root');

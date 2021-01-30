@@ -160,7 +160,7 @@
                 Add new business
             </div>
             <div class="add-buton">
-                <a href="form.php">+</a>
+                <a href="form.html">+</a>
             </div>
         </div>
 
@@ -191,7 +191,7 @@
 
         <div id="bot">  <!---ORICE DIV CARE APARTINE CHATULUI CU BOTUL AR FI BINE SA FIE INAUNTRUL DIV-ULUI "BOT" PENTRU CA ALTFEL NU MAI E DRAGGABLE--------------->
             <div class="chat">
-                <span class="response">Hi there! I'm here to help you! Type help to see what can I do for you</span>
+                <span class="response">Hi there! I'm here to help you! Type help to see what can I do for you.</span>
             </div>
 
             <input id="input-message" placeholder="Ask Gigi something"/>
@@ -373,7 +373,7 @@
                     function getResponse(msg)
                     {
                         if(data[0] == "help")
-                            $(".chat").append("<span class='response'>" + "muie" + "</span>");
+                            $(".chat").append("<span class='response'>" + "1. If you want to add your last month earnings and costs from your business, type: add costs earnings month, so it will look like: add 500 2000 January <br> 2. If you want to add an event to your calendar, type: schedule name_event date start_hour end_hour, so it will look like: schedule meeting 12 02 2021 18:00 19:30<br> 3. If you want to convert some currencies, you can use: convert value_1 currency_1 to currency_2, so it will look like: convert 10 USD to EUR" + "</span>");
                     }
 
                     function convertExchange(amount, firstSymbol, secondSymbol)

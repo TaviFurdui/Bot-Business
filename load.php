@@ -3,7 +3,7 @@
 
     $data = array();
 
-    $query = "SELECT * FROM events ORDER BY id";
+    $query = "SELECT * FROM events ORDER BY id WHERE user LIKE '".$_SESSION['username']."'";
 
     $statement = $connect->prepare($query);
 
@@ -17,7 +17,8 @@
             'id'   => $row["id"],
             'title'   => $row["title"],
             'start'   => $row["start_event"],
-            'end'   => $row["end_event"]
+            'end'   => $row["end_event"],
+            'user' => $row["user"]
         );
     }
 
