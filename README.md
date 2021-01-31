@@ -26,3 +26,9 @@
 :heavy_dollar_sign: Copy/Paste the code from `tables.sql` in the SQL section from the PhpMyAdmin.<br>
 :heavy_dollar_sign: Set the password to `root` in PhpMyAdmin. Now, the database should be done.<br>
 :heavy_dollar_sign: Also, you should install composer and put the vendor folder in the xampp folder.<br>
+<br>
+
+<h2><i><b>:yin_yang: Team Jutsu :yin_yang:</b></i></h2><br>
+We are a team of 2:<br>
+<a style="color:cyan;" href="https://github.com/TaviFurdui">Tavi</a><br>
+<a style="color:cyan;" href="https://github.com/Cixba">Cixba</a><br>
