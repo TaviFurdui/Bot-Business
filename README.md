@@ -30,5 +30,5 @@
 
 <h2><i><b>:yin_yang: Team Jutsu :yin_yang:</b></i></h2><br>
 We are a team of 2:<br>
-<a style="color:cyan;" href="https://github.com/TaviFurdui">Tavi</a><br>
-<a style="color:cyan;" href="https://github.com/Cixba">Cixba</a><br>
+:bulb: <a style="color:cyan;" href="https://github.com/Cixba">Cixba</a><br>
+:bulb: <a style="color:cyan;" href="https://github.com/TaviFurdui">Tavi</a><br>
