@@ -15,7 +15,7 @@
                 ':title'  => $_POST['title'],
                 ':start_event' => $_POST['start'],
                 ':end_event' => $_POST['end'],
-                ':user' => $_SESSION['username']
+                ':user' => $_SESSION['email']
             )
         );
     }

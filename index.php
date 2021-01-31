@@ -8,7 +8,6 @@
 <!--------- BODY-UL INCEPE LA LINIA 128 !!!!!!! ----------------------->
 <?php
     session_start();
-
     require_once("connect.php");
 
     if(isset($_SESSION['email']) && isset($_SESSION['password']))
@@ -55,7 +54,7 @@
             $date = '';
             $profit = '';
 
-            $sql = "SELECT * FROM profit WHERE user LIKE '".$_SESSION['username']."'";
+            $sql = "SELECT * FROM profit WHERE user LIKE '$email'";
             $result = mysqli_query($conexiune, $sql);
             while($row = mysqli_fetch_array($result)) 
             {
@@ -72,7 +71,7 @@
         <!------------------------ CSS, JS SI PHP PENTRU HARTA ------------------>
 
         <?php
-            $sql = "SELECT * FROM location WHERE user LIKE '".$_SESSION['username']."'";
+            $sql = "SELECT * FROM location WHERE user LIKE '$email'";
             $result = mysqli_query($conexiune, $sql);
             $locations = array();
             $counter = 0;
@@ -160,7 +159,7 @@
                 Add new business
             </div>
             <div class="add-buton">
-                <a href="form.html">+</a>
+                <a href="form.php">+</a>
             </div>
         </div>
 

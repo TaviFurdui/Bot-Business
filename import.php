@@ -9,15 +9,15 @@
         $number_empl = $_POST['number_empl'];
         $salary = $_POST['salary'];
 
-        $sql = "INSERT INTO form (name, type, number_empl, salary,user) VALUES ('$name','$type','$number_empl','$salary','".$_SESSION['username']."')";
+        $sql = "INSERT INTO form (name, type, number_empl, salary,user) VALUES ('$name','$type','$number_empl','$salary','".$_SESSION['email']."')";
         $result = mysqli_query($conexiune,$sql);
 
-        header ("Location: form.html?info=ok");
         require 'import-excel.php';
         require 'location.php';
+        header ("Location: form.php?info=ok");
     }
     else 
     {
-        header ("Location: form.html?info=eroare");
+        header ("Location: form.php?info=eroare");
     }
 ?>

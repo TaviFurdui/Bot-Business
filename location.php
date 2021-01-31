@@ -6,7 +6,7 @@
         $lat = $_POST['lat'];
         $lng = $_POST['lng'];
 
-        $sql = "INSERT INTO location (lat,lng,user) VALUES ('$lat','$lng','".$_SESSION['username']."')";
+        $sql = "INSERT INTO location (lat,lng,user) VALUES ('$lat','$lng','".$_SESSION['email']."')";
         $result = mysqli_query($conexiune,$sql);
     }
     else 

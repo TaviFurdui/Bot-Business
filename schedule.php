@@ -16,6 +16,6 @@
     $end_date = $year . '-' . $month . '-' . $day . ' ' . $last_hour;
 
     $stmt = $conexiune -> prepare("INSERT INTO events (title, start_event, end_event, user) VALUES(?, ?, ?, ?)");
-    $stmt->bind_param('ssss', $name, $start_date, $end_date, $_SESSION['username']);
+    $stmt->bind_param('ssss', $name, $start_date, $end_date, $_SESSION['email']);
     $stmt->execute();
 ?>

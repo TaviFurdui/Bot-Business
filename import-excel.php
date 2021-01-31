@@ -28,7 +28,7 @@ if($_FILES["import_excel"]["name"] != '')
             $query = "INSERT INTO profit (costs, earnings, date, user) VALUES (?,?,?,?)";
 
             $statement = $conexiune->prepare($query);
-            $statement->bind_param("ddss",$costs,$earnings,$date,$_SESSION['username']);//Bind_param pentru ca data sa fie uploadata bine
+            $statement->bind_param("ddss",$costs,$earnings,$date,$_SESSION['email']);//Bind_param pentru ca data sa fie uploadata bine
             $statement->execute();
             $statement->close();
 

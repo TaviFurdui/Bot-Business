@@ -8,6 +8,6 @@
 
 
     $stmt = $conexiune -> prepare("INSERT INTO profit (costs, earnings, date, user) VALUES(?, ?, ?, ?)");
-    $stmt->bind_param('ddss', $costs, $earnings, $date, $_SESSION['username']);
+    $stmt->bind_param('ddss', $costs, $earnings, $date, $_SESSION['email']);
     $stmt->execute();
 ?>

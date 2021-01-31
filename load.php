@@ -1,9 +1,11 @@
 <?php
+    session_start();
     $connect = new PDO('mysql:host=localhost;dbname=tech', 'root', 'root');
-
+    
     $data = array();
 
-    $query = "SELECT * FROM events ORDER BY id WHERE user LIKE '".$_SESSION['username']."'";
+    $email = $_SESSION['email'];
+    $query = "SELECT * FROM events WHERE user = '$email'";
 
     $statement = $connect->prepare($query);
 
