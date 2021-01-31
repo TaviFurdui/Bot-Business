@@ -1,3 +1,4 @@
 # Bot-Business
+![alt text](https://github.com/TaviFurdui/Bot-Business/blob/main/botBackground.png)
 
-Nuj care vedeti asta, da smr viata mea de nu e smecherie 
+http://bot-business.epizy.com/Github/login-register.php
